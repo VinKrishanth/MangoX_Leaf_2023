@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <!-- Add the style tag for basic styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* Change the background color as needed */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+
+        .output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Conditional rendering based on prediction result -->
+        {% if prediction %}
+        <div class="output">
+            <h1>Mango Leaf Disease Detection</h1>
+            <br><br>
+            <p>Diagnosed Disease: {{ prediction.prediction }}</p>
+            <!-- Display the output image 
+            <h3>Output Image:</h3>-->
+            <img src="uploads/input.jpg" alt="Output Image">
+        </div>
+        {% endif %}
+        
+    </div>
+    
+</body>
+
+</html>
